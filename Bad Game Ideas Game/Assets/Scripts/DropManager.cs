@@ -23,7 +23,7 @@ public class DropManager : MonoBehaviour
 
     public void Spawn()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey("down"))
         {
             GameObject spawnable = Instantiate(droppables[Random.Range(0, droppables.Capacity)]);
             spawnable.transform.position = new Vector2(Random.Range(range.x, range.y), yPos);
